@@ -1,22 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+
+import StartDateText from "./StartDateText"
+import TimeDifference from "./TimeDifference";
+import Milestones from "./Milestones";
 
 function App() {
+  const [startDate, setStartDate] = useState(new Date("2021-02-19T02:12:00+00:00"));
+
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <h2>Stem Cell Day ✨</h2>
+          <StartDateText startDate={startDate} />
+          <h2 className="butterfly">🦋</h2>
+          <TimeDifference startDate={startDate} />
+          <h3>Milestones ⏳</h3>
+          <Milestones startDate={startDate} milestones={[7, 14, 30, 50, 100, 182, 365, 730, 1095, 1460, 1825]}/>
+        </div>
       </header>
     </div>
   );
