@@ -4,8 +4,6 @@ const Milestones = (props) => {
   const startDate = props.startDate;
   const milestones = props.milestones;
 
-  console.log(milestones);
-
   // Work out the future date e.g add days to todays date
   const addDays = (days) => {
     let date = new Date(startDate);
@@ -19,7 +17,7 @@ const Milestones = (props) => {
     let date = new Date(startDate);
     const oneDay = 24 * 60 * 60 * 1000;
     const diff = Math.round((futureDate - today) / oneDay);
-    console.log(date, futureDate, diff)
+    
     return diff;
   };
 
