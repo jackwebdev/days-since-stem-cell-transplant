@@ -30,7 +30,7 @@ const Milestones = (props) => {
           message = `${Math.round(days / 365)} Years`;
         // If week is greater than 1 and 52 weeks.
         } else if (days / 7 > 1 && days / 6 < 52) {
-          message = `${Math.round(days / 7)} Weeks`;
+          message = `${Math.round(days / 7)} Weeks (${days} days)`;
           // It's short enough to show days!
         } else {
           message = `${days} Days`;
