@@ -17,7 +17,6 @@ const Milestones = (props) => {
     let date = new Date(startDate);
     const oneDay = 24 * 60 * 60 * 1000;
     const diff = Math.round((futureDate - today) / oneDay);
-    
     return diff;
   };
 
@@ -37,7 +36,7 @@ const Milestones = (props) => {
         }
         const futureDate = addDays(days);
         const daysToGo = daysLeft(futureDate);
-        const daysToGoMessage = daysToGo < 0 ? `✅`  : `${daysToGo.toLocaleString('en-GB')} Days Left`;
+        const daysToGoMessage = daysToGo < 1 ? `✅`  : `${daysToGo.toLocaleString('en-GB')} Days Left`;
         return <h4 key={index}>{message} - {daysToGoMessage} </h4>
       })}
     </div>
