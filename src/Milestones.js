@@ -14,7 +14,6 @@ const Milestones = (props) => {
   // Work out days left from future date
   const daysLeft = (futureDate) => {
     let today = new Date();
-    let date = new Date(startDate);
     const oneDay = 24 * 60 * 60 * 1000;
     const diff = Math.round((futureDate - today) / oneDay);
     return diff;

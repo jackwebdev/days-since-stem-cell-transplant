@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
 
 import StartDateText from "./StartDateText"
@@ -6,8 +6,9 @@ import TimeDifference from "./TimeDifference";
 import Milestones from "./Milestones";
 
 function App() {
-  const [startDate, setStartDate] = useState(new Date("2021-02-19T02:12:00+00:00"));
-
+  // const [startDate, setStartDate] = useState(new Date("2021-02-19T02:12:00+00:00"));
+  const startDate = new Date("2021-02-19T02:12:00+00:00");
+  
   return (
     <div>
       <header className="App-header">
